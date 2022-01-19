@@ -105,7 +105,7 @@ def remove_HTML(data_set: dict):
                 try:
                     soup = BeautifulSoup(f_out.read(), "html.parser")
                 except:
-                    print('error')
+                    print(f'{file} File cannot be cleaned')
                 word_list = list(soup.get_text().upper().split(" "))
                 word_list = remove_space(word_list)
                 data_set[file] = word_list
